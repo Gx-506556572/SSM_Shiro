@@ -1,0 +1,93 @@
+{
+  "msg": "请求成功",
+  "total": 2,
+  "code": 0,
+  "rows": [
+    {
+      "userId": 2,
+      "username": "jack",
+      "password": "6f89a35fca3ed82005e9ec4ddabc8226",
+      "salt": "98C69A2446384F22B5EFC7874095AC69",
+      "email": "jack@139.com",
+      "mobile": "18959139189",
+      "deptId": 1,
+      "status": 0,
+      "deleted": 0,
+      "createTime": {
+        "month": "OCTOBER",
+        "year": 2019,
+        "dayOfMonth": 30,
+        "hour": 1,
+        "minute": 5,
+        "monthValue": 10,
+        "nano": 0,
+        "second": 10,
+        "dayOfWeek": "WEDNESDAY",
+        "dayOfYear": 303,
+        "chronology": {
+          "id": "ISO",
+          "calendarType": "iso8601"
+        }
+      },
+      "updateTime": {
+        "month": "OCTOBER",
+        "year": 2019,
+        "dayOfMonth": 30,
+        "hour": 15,
+        "minute": 26,
+        "monthValue": 10,
+        "nano": 0,
+        "second": 37,
+        "dayOfWeek": "WEDNESDAY",
+        "dayOfYear": 303,
+        "chronology": {
+          "id": "ISO",
+          "calendarType": "iso8601"
+        }
+      }
+    },
+    {
+      "userId": 28,
+      "username": "admin001",
+      "password": "a59d7558c58d43878a1641e7e53178ee",
+      "salt": "23E48F397A0440E69EFAC661D911EF01",
+      "email": "jike@126.com",
+      "mobile": "13838383838",
+      "deptId": null,
+      "status": 0,
+      "deleted": 0,
+      "createTime": {
+        "month": "OCTOBER",
+        "year": 2019,
+        "dayOfMonth": 31,
+        "hour": 17,
+        "minute": 29,
+        "monthValue": 10,
+        "nano": 0,
+        "second": 33,
+        "dayOfWeek": "THURSDAY",
+        "dayOfYear": 304,
+        "chronology": {
+          "id": "ISO",
+          "calendarType": "iso8601"
+        }
+      },
+      "updateTime": {
+        "month": "OCTOBER",
+        "year": 2019,
+        "dayOfMonth": 31,
+        "hour": 17,
+        "minute": 31,
+        "monthValue": 10,
+        "nano": 0,
+        "second": 2,
+        "dayOfWeek": "THURSDAY",
+        "dayOfYear": 304,
+        "chronology": {
+          "id": "ISO",
+          "calendarType": "iso8601"
+        }
+      }
+    }
+  ]
+}
