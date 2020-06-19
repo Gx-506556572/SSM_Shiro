@@ -7,6 +7,7 @@ import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.cache.MemoryConstrainedCacheManager;
+import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.mgt.DefaultSecurityManager;
 import org.apache.shiro.realm.Realm;
 import org.apache.shiro.subject.Subject;
@@ -22,7 +23,8 @@ public class ShiroUtil {
         //使用SecurityUtils将securityManager设置到运行环境
         SecurityUtils.setSecurityManager(securityManager);
         //配置缓存管理器
-        CacheManager cache=new MemoryConstrainedCacheManager();
+        //CacheManager cache=new MemoryConstrainedCacheManager();
+        CacheManager cache=new EhCacheManager();
         securityManager.setCacheManager(cache);
     }
 

@@ -64,4 +64,5 @@
 
     <!-- 启用注解事务 -->
     <tx:annotation-driven transaction-manager="txManager"/>
+    <import resource="classpath:shiro-config.xml"/>
 </beans>

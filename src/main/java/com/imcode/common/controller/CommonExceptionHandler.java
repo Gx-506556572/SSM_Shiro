@@ -27,7 +27,7 @@ public class CommonExceptionHandler {
     @ExceptionHandler(BizException.class)
     public ModelAndView handlerBizException(BizException e, HttpServletRequest request) {
         logger.error("操作失败，请联系系统管理员", e);
-        Map<String, Object> reponseData = new HashMap<>();
+        Map<String, Object> reponseData = new HashMap<String, Object>();
         reponseData.put("code", 1);
         reponseData.put("error", "操作失败，请联系系统管理员");
         reponseData.put("msg", e.getMessage());//错误的详细信息
@@ -42,7 +42,7 @@ public class CommonExceptionHandler {
     @ExceptionHandler
     public ModelAndView handlerException(Throwable e, HttpServletRequest request) {
         logger.error("服务器内部错误", e);
-        Map<String, Object> reponseData = new HashMap<>();
+        Map<String, Object> reponseData = new HashMap<String, Object>();
         reponseData.put("code", HttpStatus.INTERNAL_SERVER_ERROR.value());//500
         reponseData.put("error", "服务器内部错误");
         reponseData.put("msg", e.getMessage());//错误的详细信息

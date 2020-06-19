@@ -68,7 +68,7 @@ public class FileController {
     @PostMapping("/uplaodsToLocal")
     @ResponseBody
     public R uplaods(@RequestParam("uploadFile") MultipartFile[] uploadFile) {
-        List<Map<String, Object>> data = new ArrayList<>();
+        List<Map<String, Object>> data = new ArrayList<Map<String, Object>>();
         for (MultipartFile f : uploadFile) {
             try {
                 data.add(fileService.uplaodToLocal(f));
