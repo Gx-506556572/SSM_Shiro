@@ -1,24 +1,31 @@
 package com.imcode.sys.shiro;
 
+import com.imcode.sys.mapper.UserMapper;
 import com.imcode.sys.model.User;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class ShiroRealm extends AuthorizingRealm  {
+    @Autowired
+    private UserMapper userMapper;
 
 //登录认证
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         UsernamePasswordToken token=(UsernamePasswordToken)authenticationToken;
+        //获取账户名称，密码
       String username=token.getUsername();
       String password=new String(token.getPassword());
+     //根据用户名去数据库查询
 
-        User user=new User("admin","123456",0);
+        User user=null;
+
         if(!user.getUsername().equals(username)){
             throw new UnknownAccountException("用户不存在");
         }

@@ -21,12 +21,10 @@ public class ShiroTest {
         UsernamePasswordToken token=new UsernamePasswordToken("admin","123456");
         Subject subject= SecurityUtils.getSubject();
         subject.login(token);
+       /* subject.isPermitted("qqq");
         subject.isPermitted("qqq");
         subject.isPermitted("qqq");
         subject.isPermitted("qqq");
-        subject.isPermitted("qqq");
-        subject.isPermitted("qqq");
-
-
+        subject.isPermitted("qqq");*/
     }
 }
